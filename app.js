@@ -11,6 +11,10 @@ const port = 3000;
 const storage = multer.memoryStorage();
 const upload = multer({ storage: storage });
 
+app.get('/',(req,res)=>{
+  res.send(200)
+})
+
 app.post('/upload', upload.single('image'), async (req, res) => {
   try {
     // Ensure the file was uploaded
