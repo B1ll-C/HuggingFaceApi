@@ -35,7 +35,7 @@ app.post('/Pest', upload.single('image'), async (req, res) => {
 
     // Log and send the result
     console.log(result.data);
-    res.json(result.data);
+    res.send(result.data);
   } catch (error) {
     console.error('Error:', error);
     res.status(500).send('An error occurred');
